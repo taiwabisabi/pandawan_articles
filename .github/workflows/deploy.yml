@@ -27,14 +27,14 @@ jobs:
         with:
           node-version: '10.x'
 
-      - name: NPM Install
+      - name: Npm Install
         run: npm install
       
       - name: Gatsby Build
-        run: npm build
+        run: npm run build
       
       - name: Static Site Deploy
-        run: P=$PASSWORD npm deploy
+        run: P=$PASSWORD npm run deploy
         env: 
           PASSWORD: ${{ secrets.FTP_PASSWORD }}
 
