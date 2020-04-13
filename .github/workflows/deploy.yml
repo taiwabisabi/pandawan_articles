@@ -21,7 +21,6 @@ jobs:
       with:
         repository: taiwabisabi/pandawan_app
         token: ${{ secrets.PAT }}
-        path: /
 
     - name: Setup Node
       uses: actions/setup-node@v1
