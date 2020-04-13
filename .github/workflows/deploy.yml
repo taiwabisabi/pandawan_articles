@@ -20,7 +20,7 @@ jobs:
         node-version: '10.x'
 
     - name: Clone App Repo
-      run: git clone "4e717707c5ce75758ef5f2b9af3bd02c48d61e4b@git@github.com:taiwabisabi/pandawan_app.git"
+      run: git clone "cd72db36af4771f2ad3dd3c4fa8271900eb4e19e@git@github.com:taiwabisabi/pandawan_app.git"
 
     - name: Run a one-line script
       run: echo Hello, world!
