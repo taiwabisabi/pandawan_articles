@@ -7,25 +7,34 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Pandawan App
-      uses: actions/checkout@v2
-      with:
-        repository: taiwabisabi/pandawan_app
-        token: ${{ secrets.PAT }}
-    
-    - name: Checkout Pandawan Articles
-      uses: actions/checkout@v2
-      with:
-        path: content
+      - name: Checkout Pandawan App
+        uses: actions/checkout@v2
+        with:
+          repository: taiwabisabi/pandawan_app
+          token: ${{ secrets.PAT }}
+      
+      - name: Checkout Pandawan Articles
+        uses: actions/checkout@v2
+        with:
+          path: content
 
-    - name: Setup Node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.x'
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
 
-    - name: Run a one-line script
-      run: ls -lah
+      - name: NPM Install
+        run: npm install
+      
+      - name: Gatsby Build
+        run: npm build
+      
+      - name: Static Site Deploy
+        run: P=$PASSWORD npm deploy
+        env: 
+          PASSWORD: ${{ secrets.FTP_PASSWORD }}
+
