@@ -1,19 +1,15 @@
 ---
-date: 2018-07-11
-title: "Big Test"
+date: YYYY-MM-DD 
+title: "Votre Titre" 
 author: 
-    name: Tai Le
-    avatar: "https://avatars3.githubusercontent.com/u/17015240?s=460&u=3a5597dca84d3eadea42c5433d80ab44847999b6&v=4"
-    description: Un Jedi utilise la Force pour la connaissance et la défense, jamais pour l'attaque.
-    link: "https://google.com"
-cover: "https://unsplash.it/400/300/?random?BigTest"
-categories: 
-    - Tech
-    - Creative Thinking
-slug: "Big-Sample_Test"
-tags:
-    - test
-    - huge
+    name: Votre Nom
+    avatar: "Lien de votre image avatar"
+    description: "Citation ou Description de vous"
+    link: "Lien pour votre profil"
+tags: # vos tags
+    - tag1
+    - tag1
+#slug: "Votre-slug" # Dé-commenter si vous voulez utiliser un custom slug (utiliser le kebabcase)
 ---
 
 ## NOTE: This "post" is based on [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) and is meant to test styling of Markdown generated documents.
